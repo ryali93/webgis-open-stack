@@ -4,6 +4,10 @@ const path = require("path");
 
 const app = express();
 
+//
+app.use(express.static(path.join(__dirname, "/static")));
+app.use('/ol', express.static(path.join(__dirname, "/node_modules/ol")));
+
 // Static Files
 app.use(express.static(path.join(__dirname, "/static")));
 
@@ -84,6 +88,17 @@ app.get("/crud/users", (req, res) => {
     users,
   });
 });
+
+/////////////////////////////
+
+app.get("/viewer/viewer1", (req, res) => {
+  res.render("viewer/viewer1", {
+    layout: path.join(__dirname, "/layouts/dashboard"),
+    footer: false
+  });
+});
+
+/////////////////////////////
 
 app.get("/layouts/stacked", (req, res) => {
   res.render("layouts/stacked", {

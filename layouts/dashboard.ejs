@@ -3,20 +3,20 @@
   <head>
     <%- include('./partials/header.ejs') %>
   </head>
-  <body class="bg-gray-50 dark:bg-gray-800">
+  <body class="bg-red-500 h-[100vh]  dark:bg-gray-800">
     <%- include('./partials/navbar-dashboard.ejs') %>
 
-    <div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+    <div class="flex pt-16 overflow-hidden h-[100vh] bg-green-100 dark:bg-gray-900">
       <%- include('./partials/sidebar.ejs') %>
 
-      <div id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900">
+      <div id="main-content" class=" w-full h-full bg-black-100 lg:ml-64 dark:bg-blue-900">
         <main>
           <%- body %>
         </main>
 
-        <% if (locals.footer && locals.footer === true) { %>
+        <!-- <% if (locals.footer && locals.footer === true) { %>
           <%- include('./partials/footer.ejs') %>
-        <% } %>
+        <% } %> -->
         
       </div>
     </div>
